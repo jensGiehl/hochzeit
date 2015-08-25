@@ -25,7 +25,7 @@
                     <li><a href="start.php" title="Home">Home</a></li>
                     <li><a href="#" title="Über uns">Über Uns</a></li>
                     <li><a href="#" title="Kontakt">Kontakt</a></li>
-                    <li><a href="galerie.html" title="Galerie">Galerie</a></li>
+                    <li><a href="galerie.php" title="Galerie">Galerie</a></li>
 
                 </ul>
             </nav>
