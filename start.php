@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+include_once 'auth.php';
+
+doLoginCheck();
+?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Hochzeit von Jens und Ulrike</title>
@@ -22,7 +27,7 @@
             <p id="p2"> heiraten</p>
             <nav id="nav">
                 <ul id="navigation">
-                    <li><a href="start.html" title="Home">Home</a></li>
+                    <li><a href="start.php" title="Home">Home</a></li>
                     <li><a href="#" title="Über uns">Über Uns</a></li>
                     <li><a href="#" title="Kontakt">Kontakt</a></li>
                     <li><a href="galerie.html" title="Galerie">Galerie</a></li>

@@ -7,8 +7,6 @@ error_reporting(-1);
 */
 $error = false;
 
-session_start();
-
 if (isset($_POST['submit'])) {
     if (checkPassword($_POST['sitepassword'])) {
         login();

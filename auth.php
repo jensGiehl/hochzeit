@@ -1,8 +1,16 @@
 <?php
 include_once 'config.php';
 
+session_start();
+
 function isLogedIn() {
-    return isset($_SESSION['login']) && $_SESSION['login'] == true;
+    return (isset($_SESSION['login'])) and ($_SESSION['login'] == true);
+}
+
+function doLoginCheck() {
+    if (! isLogedIn()) {
+        gotoLogin();
+    }
 }
 
 function login() {
@@ -10,7 +18,13 @@ function login() {
 }
 
 function gotoStartpage() {
-    header('Location: start.html');
+    header('Location: start.php');
+    exit;
+}
+
+function gotoLogin() {
+    session_destroy();
+    header('Location: index.php');
     exit;
 }
 
