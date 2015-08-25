@@ -24,9 +24,12 @@ if (isset($_POST['submit'])) {
             'username' => $_POST['username'],
             'password' => $_POST['password']
         ),
-        'sitepassword' => $cryptPassword
+        'login' => array(
+            'password' => $cryptPassword,
+            'options' => $options
+        )
     );
-    file_put_contents('config.php', '<?php return ' . var_export($config, true) . ';');
+    file_put_contents('config.php', '<?php $config = ' . var_export($config, true) . ';');
     unlink('install.php');
     $isInStep2 = true;
 }
