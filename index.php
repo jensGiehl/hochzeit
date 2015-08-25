@@ -1,18 +1,25 @@
 <?php
-include 'config.php';
+include_once 'auth.php';
+/*
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(-1);
+*/
+$error = false;
+
+session_start();
 
 if (isset($_POST['submit'])) {
-    // Crypt password
-    $options = $config['login']['options'];
-    $cryptPassword = password_hash($_POST['sitepassword'], PASSWORD_BCRYPT, $options);
-
-    // Compare with the stored password
-    if ($cryptPassword == $config['login']['password']) {
-        header('Location: start.html');
-        exit;
+    if (checkPassword($_POST['sitepassword'])) {
+        login();
+        gotoStartpage();
     } else {
         $error = true;
     }
+}
+
+if (isLogedIn()) {
+    gotoStartpage();
 }
 
 ?>
@@ -51,7 +58,7 @@ if (isset($_POST['submit'])) {
             <label for="sitepassword">Zugangspasswort</label>
             <input type="password" class="form-control" id="sitepassword" name="sitepassword"
                    placeholder="Zugangspassword"
-                   required>
+                   required autofocus>
         </div>
         <button type="submit" class="btn btn-primary" name="submit">Seite betreten</button>
     </form>
