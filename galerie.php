@@ -41,20 +41,9 @@ doLoginCheck();
         <main>
             <div id="content">
                 <h1>Galerie</h1>
-                <article>
-                    <h2>Unsere gemeinsamen Erinnerungen</h2>
-
-                    <p>Hier geben wir euch die Möglichkeit eure Bilder, die Ihr auf der Hchzeig gemacht habt hoch zu
-                        laden.</p>
-
-                    <p> Dazu bitte einfach die Bilder in den dafür vorgesehenen Bereich ziehen.</p>
-
-                </article>
-                <form action="/file-upload" method="post" enctype="multipart/form-data" class="dropzone"
-                      id="my-awesome-dropzone">
-
-                </form>
-
+                <?php
+                include 'upload.php';
+                ?>
             </div>
         </main>
     </div>
