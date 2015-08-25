@@ -1,4 +1,6 @@
 <?php
+include_once 'auth.php';
+
 /*
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
@@ -14,7 +16,7 @@ if (isset($_POST['submit'])) {
         'cost' => 11,
         'salt' => uniqid(mt_rand(), true)
     ];
-    $cryptPassword = password_hash($_POST['sitepassword'], PASSWORD_BCRYPT, $options);
+    $cryptPassword = cyrptPassword($_POST['sitepassword'], $options);
 
     // Save config file
     $config = array(
@@ -30,7 +32,10 @@ if (isset($_POST['submit'])) {
         )
     );
     file_put_contents('config.php', '<?php $config = ' . var_export($config, true) . ';');
+
+    // Remove this file
     unlink('install.php');
+
     $isInStep2 = true;
 }
 ?>
