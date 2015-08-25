@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+
+<?php
+include_once 'auth.php';
+
+doLoginCheck();
+?>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Hochzeit von Jens und Ulrike</title>
