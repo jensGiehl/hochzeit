@@ -11,12 +11,12 @@ print_r($_POST);
 $isInStep2 = false;
 
 if (isset($_POST['submit'])) {
-    // Crypt sitepassword
+    // crypt sitepassword
     $options = [
         'cost' => 11,
         'salt' => uniqid(mt_rand(), true)
     ];
-    $cryptPassword = cyrptPassword($_POST['sitepassword'], $options);
+    $cryptPassword = cryptPassword($_POST['sitepassword'], $options);
 
     // Save config file
     $config = array(

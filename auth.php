@@ -31,9 +31,9 @@ function gotoLogin() {
 function checkPassword($password) {
     global $config;
     $options = $config['login']['options'];
-    return cyrptPassword($password, $options) == $config['login']['password'];
+    return cryptPassword($password, $options) == $config['login']['password'];
 }
 
-function cyrptPassword($password, $options) {
+function cryptPassword($password, $options) {
     return password_hash($password, PASSWORD_BCRYPT, $options);
 }
