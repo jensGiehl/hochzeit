@@ -29,6 +29,9 @@ if (isset($_POST['submit'])) {
         'login' => array(
             'password' => $cryptPassword,
             'options' => $options
+        ),
+        'upload' => array(
+            'folder' => $_POST['uploadFolder']
         )
     );
     file_put_contents('config.php', '<?php $config = ' . var_export($config, true) . ';');
@@ -75,6 +78,14 @@ if (!$isInStep2) {
         <div class="form-group">
             <label for="sitepassword">Passwort</label>
             <input type="text" class="form-control" id="sitepassword" name="sitepassword" placeholder="Password"
+                   required>
+        </div>
+
+        <h2>Upload Einstellungen</h2>
+
+        <div class="form-group">
+            <label for="uploadFolder">Ordnername</label>
+            <input type="text" class="form-control" id="uploadFolder" name="uploadFolder" placeholder="Upload-Ordner"
                    required>
         </div>
 
