@@ -17,6 +17,52 @@ body {background-color:#87be3c;
 	 overflow:hidden;
      } 
 
+#bg-image{
+			position:absolute;
+			height:400px;
+			width:100%;
+			margin:0 auto;
+			 /*border: 1px solid green;*/			 
+		 }
+#bg-image img {
+			position:absolute;
+			animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-name: bg-imageFadeInOut;
+    animation-timing-function: ease-in;
+	z-index:0;
+			}
+
+@keyframes bg-imageFadeInOut {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+#bg-image img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+#bg-image img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+#bg-image img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+#bg-image img:nth-of-type(4) {
+  animation-delay: 0s;
+}
 
 nav { 	float:left;
 		height:50px;
@@ -27,6 +73,7 @@ nav { 	float:left;
 		margin: 0 auto;
 		text-align: center;
 	    /*padding: 50px 0;*/
+		 /*border: 1px solid red;*/
 }
 nav ul {
 	  padding: 10px;
@@ -82,8 +129,8 @@ nav ul li a:hover {
 .form {max-width:300px;}
 	
 header { !-overflow:hidden;
-		  background-image:url('../images/ju2.jpg');
-		  background-repeat:no-repeat;
+		  /*background-image:url('../images/ju1.jpg');
+		  background-repeat:no-repeat;*/
 		  width:100%;
 		  height:400px;
 		  float:left;
@@ -95,9 +142,12 @@ header { !-overflow:hidden;
      -moz-border-top-left-radius: 12px;
      border-top-left-radius: 12px;
 	 border-top-right-radius: 12px;
-		  
+		   /*border: 1px solid blue;*/
 		  }
-
+/*#htext{
+		z-index:99;
+		border: 1px solid green;
+		}*/
 #content { float:left;
 		  top:153px;
           width:100%;
@@ -119,7 +169,8 @@ header p{text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,
 		}
 header #p1{text-align:left;
 		  margin-top: 100px;
-		padding-left:100px;}
+		padding-left:100px;
+		z-index:999;}
 header #p2 {
 text-align:right;
 		  !-margin-top: 100px;
