@@ -36,6 +36,9 @@ if (isset($_POST['submit'])) {
     );
     file_put_contents('config.php', '<?php $config = ' . var_export($config, true) . ';');
 
+    // Create upload folder
+    mkdir( $_POST['uploadFolder'], 0777, true );
+
     // Remove this file
     unlink('install.php');
 

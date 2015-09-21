@@ -1,3 +1,6 @@
 /images/*.jpg
 /.idea
 config.php
+/.settings
+.buildpath
+.project
