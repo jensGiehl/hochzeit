@@ -20,29 +20,8 @@ if (isLogedIn()) {
     gotoStartpage();
 }
 
+include_once 'pageHeader.php';
 ?>
-<html>
-<head>
-    <title>Ulrike + Jens</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            display: table;
-        }
-
-        .container {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-        }
-    </style>
-</head>
-<body>
 <div class="container">
     <?php
     if ($error) {
@@ -61,5 +40,5 @@ if (isLogedIn()) {
         <button type="submit" class="btn btn-primary" name="submit">Seite betreten</button>
     </form>
 </div>
-</body>
-</html>
+<?php
+include_once 'pageFooter.php';

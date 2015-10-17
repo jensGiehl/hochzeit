@@ -44,14 +44,9 @@ if (isset($_POST['submit'])) {
 
     $isInStep2 = true;
 }
-?>
-<html>
-<head>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-</head>
-<body>
-<?php
+
+include_once 'pageHeader.php';
+
 if (!$isInStep2) {
     ?>
     <form method="post" action="install.php" autocomplete="off">
@@ -100,6 +95,5 @@ if (!$isInStep2) {
     <p class="bg-danger">Bitte diese Datei vom Server l&ouml;schen (falls nicht automatisch geschehen)!</p>
     <?php
 }
-?>
-</body>
-</html>
+
+include_once 'pageFooter.php';

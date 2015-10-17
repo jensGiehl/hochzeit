@@ -4,23 +4,9 @@
 include_once 'auth.php';
 
 doLoginCheck();
+
+include_once 'pageHeader.php';
 ?>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Hochzeit von Jens und Ulrike</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Hochzeit, Wedding, Heirat, Braut, Bräutigam, Ehe, gelüpte"/>
-    <meta name="description"
-          content="Wir heiraten!!! Wer wir sind? Jens Giehl und Ulrike Jäger. Diese Seite soll den Gästen die Möglichkeit geben, alle wichtigen Infos zur Hochzeit zu erhalten."/>
-    <meta name="Language" content="de"/>
-    <meta name="author" content="Jens Giehl, Thomas Ohler"/>
-    <style type="text/css">@import "./css/design.css";</style>
-    <style type="text/css">@import "./css/dropzone.css";</style>
-    <script src="./js/dropzone.js"></script>
-</head>
-
-<body>
 <div class="bgbox" id="bg">
     <div id="container">
         <header>
@@ -48,6 +34,5 @@ doLoginCheck();
         </main>
     </div>
 </div>
-
-</body>
-</html>
+<?php
+include_once 'pageFooter.php';
