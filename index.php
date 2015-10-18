@@ -22,7 +22,7 @@ if (isLogedIn()) {
 
 include_once 'pageHeader.php';
 ?>
-<div class="container">
+<div class="centered-container">
     <?php
     if ($error) {
         ?>
