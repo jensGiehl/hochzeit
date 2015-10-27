@@ -1,4 +1,5 @@
-/images/*.jpg
+/images/ju*.jpg
+/images/wedding_*
 /.idea
 config.php
 /.settings
