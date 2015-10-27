@@ -20,3 +20,7 @@ html, body {
     margin: auto;
     text-align: center;
 }
+
+.text-left {
+	text-align: left;
+}
