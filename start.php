@@ -8,27 +8,17 @@ include_once 'pageHeader.php';
 <div id="carousel-header">
 	<?php include 'carousel.php'?>
 </div>
-<div class="container-fluid">
 
-	<div class="row">
-		<div class="col-md-12">
-			<br/><br/>
-		</div>
-	</div>
+<br/>
+<div id="infotext" class="text-center">
+	<p>Hallo <?=$_SESSION['username']?>,</p>
+	<p>vielen Dank schon einmal, dass du uns deiner Bilder zur Verf&uuml;gung stellst!</p>
+</div>
 
-	<div class="row">
-		<div class="col-md-1">
-		</div>
+<br/>
 
-		<div class="col-md-10">
-			<div id="upload-images">
-				<?php include 'upload.php'?>
-			</div>
-		</div>
-
-		<div class="col-md-1">
-		</div>
-	</div>
+<div id="upload-images">
+	<?php include 'upload.php'?>
 </div>
 <?php
 include_once 'pageFooter.php';
