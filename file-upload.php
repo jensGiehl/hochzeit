@@ -12,6 +12,12 @@ $ds = DIRECTORY_SEPARATOR;
 
 $storeFolder = $config['upload']['folder'];
 
+// Create folder if not exist
+if (!file_exists($storeFolder)) {
+	mkdir($storeFolder, 0777, true);
+}
+
+// Upload files
 if (!empty($_FILES)) {
     $tempFile = $_FILES['file']['tmp_name'];
     $targetPath = dirname( __FILE__ ) . $ds. $storeFolder . $ds;
