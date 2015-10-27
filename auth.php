@@ -15,6 +15,7 @@ function doLoginCheck() {
 
 function login() {
     $_SESSION['login'] = true;
+    $_SESSION['username'] = $_POST['username'];
 }
 
 function gotoStartpage() {
