@@ -21,7 +21,8 @@ if (!file_exists($storeFolder)) {
 if (!empty($_FILES)) {
     $tempFile = $_FILES['file']['tmp_name'];
     $targetPath = dirname( __FILE__ ) . $ds. $storeFolder . $ds;
-    $name = uniqid() . "_" . $_FILES["file"]["name"];
+    $autor = str_replace('/', '_', $_SESSION['username']);
+    $name = $autor . "_" . uniqid() . "_" . $_FILES["file"]["name"];
     $targetFile =  $targetPath.$name;
     move_uploaded_file($tempFile,$targetFile);
 }
