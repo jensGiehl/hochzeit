@@ -20,5 +20,9 @@ include_once 'pageHeader.php';
 <div id="upload-images">
 	<?php include 'upload.php'?>
 </div>
+
+<div class="wedding_pair">
+	<img src="images/wedding_kissing.png" />
+</div>
 <?php
 include_once 'pageFooter.php';
