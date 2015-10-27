@@ -10,5 +10,6 @@
 	<link rel="stylesheet" href="css/dropzone.css">
 	<link rel="stylesheet" href="css/styles.css" />
 	<script src="js/dropzone.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
