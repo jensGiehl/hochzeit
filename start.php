@@ -12,7 +12,7 @@ include_once 'pageHeader.php';
 <br/>
 <div id="infotext" class="text-center">
 	<p>Hallo <?=$_SESSION['username']?>,</p>
-	<p>vielen Dank schon einmal, dass du uns deiner Bilder zur Verf&uuml;gung stellst!</p>
+	<p>vielen Dank, wir freuen uns &uuml;ber deine Bilder!</p>
 </div>
 
 <br/>
