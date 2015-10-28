@@ -24,5 +24,11 @@ if (!empty($_FILES)) {
     $autor = str_replace('/', '_', $_SESSION['username']);
     $name = $autor . "_" . uniqid() . "_" . $_FILES["file"]["name"];
     $targetFile =  $targetPath.$name;
-    move_uploaded_file($tempFile,$targetFile);
+
+    $filetype = strtolower(substr($name, -4));
+    if ($filetype == '.jpg' || $filetype == '.jpeg' || $filetype == '.3gp' || $filetype == '.mov'
+    		|| $filetype == '.png' || $filetype == '.gif' || $filetype == '.mts' || $filetype == '.mpeg'
+    		|| $filetype == '.avi') {
+    	move_uploaded_file($tempFile,$targetFile);
+    }
 }
