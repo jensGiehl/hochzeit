@@ -20,12 +20,6 @@ if (isset($_POST['submit'])) {
 
     // Save config file
     $config = array(
-        'database' => array(
-            'host' => $_POST['host'],
-            'name' => $_POST['dbname'],
-            'username' => $_POST['username'],
-            'password' => $_POST['password']
-        ),
         'login' => array(
             'password' => $cryptPassword,
             'options' => $options
@@ -50,27 +44,6 @@ include_once 'pageHeader.php';
 if (!$isInStep2) {
     ?>
     <form method="post" action="install.php" autocomplete="off">
-        <h1>Setup</h1>
-
-        <h2>Datenbank</h2>
-
-        <div class="form-group">
-            <label for="host">Hostname</label>
-            <input type="text" class="form-control" id="host" name="host" placeholder="Hostname" required>
-        </div>
-        <div class="form-group">
-            <label for="dbname">Datenbankname</label>
-            <input type="text" class="form-control" id="dbname" name="dbname" placeholder="Datenbankname" required>
-        </div>
-        <div class="form-group">
-            <label for="username">Benutzername</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Benutzername" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Passwort</label>
-            <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
-        </div>
-
         <h2>Zugang zur Webseite</h2>
 
         <div class="form-group">
