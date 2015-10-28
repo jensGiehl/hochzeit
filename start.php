@@ -10,9 +10,9 @@ include_once 'pageHeader.php';
 </div>
 
 <br/>
-<div id="infotext" class="text-center">
+<div id="infotext" class="text-center font-text">
 	<p>Hallo <?=$_SESSION['username']?>,</p>
-	<p>vielen Dank, wir freuen uns &uuml;ber deine Bilder!</p>
+	<span>vielen Dank, wir freuen uns &uuml;ber deine Bilder!</span>
 </div>
 
 <br/>
