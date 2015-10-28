@@ -5,4 +5,5 @@ config.php
 /.settings
 .buildpath
 .project
-/fonts/CabinSketch*
+/fonts/*
+!/fonts/glyphicons-*
