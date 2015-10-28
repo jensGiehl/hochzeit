@@ -47,3 +47,18 @@ html, body {
 	text-align: left;
 }
 
+
+
+@keyframes fyling_heart {
+    0%   {bottom: 135px;right: 36px;}
+    50%  {bottom: 32%;right: 36px; opacity: 0.8;}
+    100% {bottom: 44%;right: 36px; opacity: 0.0;}
+}
+
+.animated {
+    position: fixed;
+    animation-name: fyling_heart;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
