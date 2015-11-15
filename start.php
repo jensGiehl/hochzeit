@@ -13,6 +13,7 @@ include_once 'pageHeader.php';
 <div id="infotext" class="text-center font-text">
 	<p>Hallo <?=$_SESSION['username']?>,</p>
 	<span>vielen Dank, wir freuen uns &uuml;ber deine Bilder!</span>
+	<p>Aus allen Einsendungen erstellen wir eine Gallerie. Den Link dazu erhälst du dann von uns.</p>
 </div>
 
 <br/>
