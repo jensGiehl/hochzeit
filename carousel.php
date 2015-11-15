@@ -16,6 +16,9 @@ include_once 'pageHeader.php';
       <img src="images/ju2.jpg" />
     </div>
     <div class="item">
+      <img src="images/ju4.jpg" />
+    </div>
+    <div class="item">
       <img src="images/ju3.jpg" />
     </div>
   </div>
